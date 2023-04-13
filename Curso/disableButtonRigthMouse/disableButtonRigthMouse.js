@@ -3,11 +3,12 @@ function boton_derecho(e) {
     if (navigator.appName == 'Netscape' && (e.which == 3 || e.which == 2)) {
 
         return false;
-    }
-    else if (window.navigator.cookieEnabled == true && (e.button == 2 || e.button == 3)) {
+    }/* importante window.navigator.cookieEnabled */
+else if (window.navigator.cookieEnabled == true && (e.button == 2 || e.button == 3)) {
         alert("Lo sentimos, el botón derecho del ratón está deshabilitado.");
     }
     console.log("entro 1")
     return true;
 }
 window.onmousedown = boton_derecho;
+
