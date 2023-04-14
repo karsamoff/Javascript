@@ -1,1 +1,1 @@
-alert("!Welcome to our page¡");
+alert("!Welcome to our page¡");/* funcion de alerta */
