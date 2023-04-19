@@ -22,3 +22,17 @@ function espar( x ) {
   console.log(espar(1512));
   console.log(espar(1511));
 console.log(myNumber,test,test1,test2,test3,num1,num2,test4,test5,test6,x,y)
+
+let result = (7 + 13) / (9 + 7);
+let result2 = 100 / (2 * 6);
+
+
+let result3 = result*result2;
+let finalResult = result.toFixed(2); Math.round(finalResult);
+let finalResult1 = result3.toFixed(2); 
+let finalResultTpOf = typeof result;
+
+
+
+console.log(result,result2,result3,finalResult,finalResult1,finalResultTpOf)
+

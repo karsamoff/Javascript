@@ -68,19 +68,7 @@ const result2 = result * result1;
 
 console.log(result,result1,result2)*/
 
-/* const sections = document.querySelector('section')
 
-const para1 = document.createElement('p');
-const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
-para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
-const para2 = document.createElement('p');
-const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
-para2.textContent = evenOddResultCheck;
-
-section.appendChild(para1);
-section.appendChild(para2);
-
-console.log('test',para1) */
 
 let finalResult = 48;
 
@@ -93,20 +81,3 @@ function espar( x ) {
   return !( x & 1 );
 }
 console.log(espar(finalResult));
-
-
-
-
-// Don't edit the code below here!
-
-const section = document.querySelector('section');
-
-const para1 = document.createElement('p');
-const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${finalResult}`;
-para1.textContent = `Is the finalResult 48? ${finalResultCheck}`;
-const para2 = document.createElement('p');
-const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
-para2.textContent = evenOddResultCheck;
-
-section.appendChild(para1);
-section.appendChild(para2);
