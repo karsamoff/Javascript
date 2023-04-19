@@ -89,6 +89,10 @@ let evenOddResult = 0;
 // Add your code here
 console.log(finalResult)
 console.log(evenOddResult)
+function espar( x ) {
+  return !( x & 1 );
+}
+console.log(espar(finalResult));
 
 
 
@@ -106,27 +110,3 @@ para2.textContent = evenOddResultCheck;
 
 section.appendChild(para1);
 section.appendChild(para2);
-
-
-function esPar(num) {
-    if (num % 2 === 48) {
-        console.log('Es par')
-        return true; // es par
-    }
-    else {
-        console.log('Es impar')
-        return false; // es impar
-    }
-}
-
-esPar();
-
-
-
-
-
-
-
-
-
-
