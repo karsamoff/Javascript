@@ -1,17 +1,14 @@
 const btn = document.getElementById("Mybtn")
 
-const menuContent = document.getElementById("menuContent")
+const contentMenu = document.getElementById("menuContent")
 
+btn.onclick = function () {
+  contentMenu.style.display = "block";
+ // Preguntar como cerrar haciendo click en la cualquier parte de la ventana Y en el mismo button
+}
 
-
-
-function display_None()
-if ()menu.onclick = function() {
-    menuContent.style.display = "block";
+window.onclick = function (event) {
+  if (event.target == menuContent) {
+    menuContent.style.display = "none";
   }
-   
-  window.onclick = function(event) {
-    if (event.target == menuContent) {
-      menuContent.style.display = "none";
-    }
-  }
+}
