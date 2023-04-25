@@ -1,3 +1,12 @@
+.header{
+    display: flex;
+    border-bottom: solid;
+    padding: 10px;
+    margin: 10px;
+}
+.Menu{
+    padding-inline: 80px;
+}
 .menuContent {
     display: none;
     position: fixed;
@@ -10,11 +19,14 @@
 
 .myBton {
     border: rgba(0, 0, 0, 0.4);
-    max-width: 50px;
     max-height: 25px;
 }
 .myBton:hover,
 .myBton:focus {
     color: #fff;
-	background-color: rgba( 0, 58, 8);
+	background-color: rgb(26, 93, 96);
+}
+
+.links{
+    display: flex;
 }
