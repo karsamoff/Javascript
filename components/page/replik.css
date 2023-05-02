@@ -11,6 +11,8 @@
     font-size: .875rem;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 590px;
+    text-decoration: none;
+    color: black;
     
 
 }
@@ -32,7 +34,7 @@
     display: flex;
 }
 .logo{
-    width: 220px;
+    
     position: absolute !important;
     top: 55px;
     right: 852px;       
@@ -41,4 +43,18 @@
     position: relative;
     top: 17px;
     left: 62px;
+}
+.search-box{
+    border: 3px;
+    border-radius: 30pxscrip;
+    
+}
+
+.langdings{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@media screen {
+    
 }
