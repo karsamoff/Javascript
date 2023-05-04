@@ -263,11 +263,177 @@ console.log((b > 5) && (b < 10)); //false
 * LA EXPRESION ES VERDADERA SI ALGUNO DE LOS DOS OPERANDOS O AMBOS SON VERDADEROS*  
 */
 
-console.log(true || true);
+/* console.log(true || true);
 console.log(true || false);
 console.log(false || true);
 console.log(false || false);
 
 var a = 8;
-console.log((a < 5) || (a > 15)); //
-console.log((a > 5) || (a > 15));
+console.log((a < 5) || (a > 15)); //false
+
+console.log((a > 5) || (a > 15)); //true
+
+ */
+//Tabla de verdad del operador NOT
+//Para: !X
+
+/*
+|  X  |  !X  |
+--------------
+|  T  |  F   |
+|  F  |  T   |
+--------------
+*/
+
+/* console.log(!true);
+console.log(!false);
+
+var a = 8 ;
+console.log((!(a > 5)));// !false > true, tenemos una negacion del valor verdadero ya que a = 8 es mayor que 5.
+
+console.log(!(a < 5)); //  !true  > false, tenemos una negacion del valor verdadero ya que a = ( es mayor que 5) */
+
+// CONDICIONALES *****
+
+/* IF () { } */
+
+/* if (true) {
+    console.log("La condicion es verdadera.");
+
+} */
+
+/* var x = 5;
+if (x > 2) {
+    console.log("La condición es verdadera.")
+} */
+
+/* var estacion = "Invierno"
+
+if (estacion == "Invierno") {
+    console.log("¡Sí! Me encanta el invierno.")
+}
+
+*/
+
+//ELSE*****
+
+/* if (true) {
+    console.log("La condición es verdadera.")
+} else {
+    console.log("La condición es falsa.")
+} */
+
+/* var x = 5; 
+if (x > 2) {   // La condición es verdadera.
+    console.log("La condición es verdadera.")
+} else {
+    console.log("La condición es falsa.")
+} 
+var x = 5; //  La condición es falsa.
+if (x < 2) {
+    console.log("La condición es verdadera.")
+} else {
+    console.log("La condición es falsa.")
+}  */
+
+/* var estacion = "Invierno"; // VERDADERA
+if (estacion === "Invierno") {
+    console.log("La condición es verdadera.")
+} else {
+    console.log("La condición es falsa.")
+}
+var estacion = "Verano"; // FALSA
+if (estacion == "Invierno") {
+    console.log("La condición es verdadera.")
+} else {
+    console.log("La condición es falsa.")
+} */
+
+//ELSE IF******
+
+/* function clasificarValor(valor){
+    if (valor % 2 == 0){
+        console.log("Divisible entre 2.")
+    } else if (valor % 3 == 0){
+        console.log("Divisible entre 3.")
+    } else {
+        console.log("No es divisible entre las opciones.")
+    }
+}
+    clasificarValor(2);
+    clasificarValor(15);
+    clasificarValor(7); */
+//CONDICONALES ORDEN LOGICO
+/* function clasificarValor(valor){
+    if (valor < 5){
+        console.log("Menor que 5");
+    } else if (valor < 10){
+        console.log("Menor que 10");
+    } else {
+        console.log("Mayor o igual que 10");
+    }
+}
+clasificarValor(2);
+clasificarValor(7);
+clasificarValor(15); */
+
+/* function interpretarIMC(IndiceDeMasaCorporal){
+    if (IndiceDeMasaCorporal< 18.5){
+        console.log("Bajo de peso.")
+    } else if (IndiceDeMasaCorporal <= 24.9){
+        console.log("Normal")
+    } else if (IndiceDeMasaCorporal <= 29.9){
+        console.log("Sobre Peso")
+    } else {
+        console.log("Obeso")
+    }
+}
+interpretarIMC(10)
+interpretarIMC(19)
+interpretarIMC(25)
+interpretarIMC(30)
+ */
+
+
+// Codigo De Golf
+
+/* En el juego de golf cada joyo tiene un par que representa el numero promedio de golpes que se espera que haga un golfista para introducir la pelota en el hoyo.
+Hay un nombre diferente dependiendo de que tan por encima o por debajo del par estén tus golpes.
+Tu funcion tomará los argumentos par y golpes.
+Retorna la cadena correcta segun esta tabla que muestra los golpes en orden de mayor a menor prioridad: 
+GOLPES          RETORNAR
+------------------------
+1               "HOLE-IN-ONE!"
+<= par - 2      "EAGLE" 
+par -  1        "BIRDIE"
+par             "Par"
+par + 1         "Bogey"             
+par + 2         "Double Bogey"
+>= par + 3      "Go Home!"
+par y golpes siempre serán numericos y positivos.
+*/
+
+function puntajeDeGolf(par,golpes){
+    if (golpes == 1){
+        return "HOLE IN ONE!";
+    } else if (golpes <= par - 2) {
+        return "EAGLE";
+    } else if (golpes == par){
+        return "par";
+    } else if (golpes == par -  1){
+        return "Par";
+    } else if (golpes == par + 1) {
+        return "Bogey";
+    } else if (golpes == par + 2) {
+        return "Double Bogey";
+    } else if (golpes >= par + 3) {
+        return "Go Home!"
+    }
+}
+console.log(puntajeDeGolf(4, 1))
+console.log(puntajeDeGolf(3, 2))
+console.log(puntajeDeGolf(4, 5))
+console.log(puntajeDeGolf(6, 8))
+console.log(puntajeDeGolf(8, 6))
+console.log(puntajeDeGolf(10, 13))
+console.log(puntajeDeGolf(10, 10))
