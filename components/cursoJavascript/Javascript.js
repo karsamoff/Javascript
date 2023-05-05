@@ -413,7 +413,7 @@ par + 2         "Double Bogey"
 par y golpes siempre serán numericos y positivos.
 */
 
-function puntajeDeGolf(par,golpes){
+/* function puntajeDeGolf(par,golpes){
     if (golpes == 1){
         return "HOLE IN ONE!";
     } else if (golpes <= par - 2) {
@@ -436,4 +436,149 @@ console.log(puntajeDeGolf(4, 5))
 console.log(puntajeDeGolf(6, 8))
 console.log(puntajeDeGolf(8, 6))
 console.log(puntajeDeGolf(10, 13))
-console.log(puntajeDeGolf(10, 10))
+console.log(puntajeDeGolf(10, 10)) */
+
+//SENTENCIAS SWITCH
+
+/* function clasificarValor(valor) {
+    var respuesta;
+    switch (valor) {
+        case 1:
+            respuesta = "alpha";
+            break;
+        case 2:
+            respuesta = "beta";
+            break;
+        case 3:
+            respuesta ="gamma";
+            break;
+        case 4:
+            respuesta = "delta";
+            break;
+    }
+    return respuesta;
+}
+console.log(clasificarValor(1))
+console.log(clasificarValor(2))
+console.log(clasificarValor(3))
+console.log(clasificarValor(4)) */
+
+/* var producto = "hamburguesa"
+switch (producto) {
+    case "pizza":
+        console.log("la pizza básica cuesta $10.55")
+    break;
+    case "hamburguesa":
+        console.log("la hamburguesa cuesta $6.78")
+        break;
+    case "helado":
+        console.log("el helado cuesta $2.8")
+        break;
+}
+ */
+
+//opcionPredeterminadaALaSentenciaSwitch
+
+/* function seleccionarIdioma(valor) {
+    var idioma;
+    switch (valor) {
+        case 1:
+            idioma = "Español";
+            break;
+        case 2:
+            idioma = "Frances";
+            break;
+        case 3:
+            idioma = "Italiano";
+            break;
+        default:
+            idioma = "Ingles";
+            break;
+    }
+    return idioma;
+}
+console.log(seleccionarIdioma(1))
+console.log(seleccionarIdioma(2))
+console.log(seleccionarIdioma(3))
+console.log(seleccionarIdioma()) //Predeterminado
+*/
+
+/* function clasificarVolumen (valor) {
+    var volumen;
+    switch (valor) {
+        case 1: 
+        volumen = "bajo";
+        break;
+        case 2:
+            case 3:
+                volumen = "Intermedio";
+                break;
+                case 4:
+                case 5:
+                case 6:
+                    volumen = "alto";
+                    break;
+    }
+    return volumen;
+}
+console.log(clasificarVolumen(1))
+console.log(clasificarVolumen(2))
+console.log(clasificarVolumen(3))
+console.log(clasificarVolumen(4))
+console.log(clasificarVolumen(5))
+console.log(clasificarVolumen(6)) */
+
+
+//Reemplazar if...else con switch
+
+/* function seleccionarIdioma(valor) {
+    var idioma;
+    if (valor == 1) {
+        idioma = "Español";
+    } else if (valor == 2) {
+        idioma = "Frances";
+    } else if (valor == 3) {
+        idioma = "Italiano";
+    } else {
+        idioma = "Ingles";
+    }
+    return idioma;
+} */
+
+/* function seleccionarIdioma(valor) {
+    var idioma;
+    switch(valor){
+        case 1:
+            idioma = "Español";
+            break;
+        case 2:
+            idioma = "Frances";
+            break;
+        case 3:
+            idioma = "Italiano";
+            break;
+        default:
+            idioma = "Inglés";
+            break;
+    }
+    return idioma;
+}
+console.log(seleccionarIdioma()) // default
+console.log(seleccionarIdioma(1))
+console.log(seleccionarIdioma(2))
+console.log(seleccionarIdioma(3)) */
+
+/* function esMenorQue(a, b){
+    if (a < b) {
+        return true;
+    } else { 
+        return false;
+    }
+}
+console.log(esMenorQue(45, 50)) // esta funcion simplificada seria:
+ */
+function esMenorQue(a, b) {
+    return a < b;
+}
+console.log(esMenorQue(45, 50))
+console.log(esMenorQue(45, 5))
