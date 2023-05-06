@@ -577,8 +577,176 @@ console.log(seleccionarIdioma(3)) */
 }
 console.log(esMenorQue(45, 50)) // esta funcion simplificada seria:
  */
-function esMenorQue(a, b) {
+/* function esMenorQue(a, b) {
     return a < b;
 }
 console.log(esMenorQue(45, 50))
 console.log(esMenorQue(45, 5))
+ */
+
+//propiedadesDeObjetos 
+
+/* var miPerro = {
+    "nombre": "coco",
+    "edad": 5,
+    "peso": 6,
+    "raza": "tacita de té"
+};
+
+console.log(miPerro.nombre);//asi se accede a las propiedades de los objetos. el nombre de la var seguido de un punto la propiedad.
+ */
+
+/* var myBook = {
+    "color": "verde",
+    "categoria": 3,
+    "número de paginas": 200,
+    "número de hojas": 100
+};
+console.log(myBook["número de hojas"])//usamos los corchetes cuando tenemos propiedades separadas por espacio *número de paginas-número de hojas*
+ */
+
+//ACCEDER A PROPIEDADES: VARIABLES
+
+/* var resultados = {
+   1: "nora26",
+   2: "gino577",
+   3: "estef543",
+   4: "kiara566"
+};
+var posicion = 4;
+console.log(resultados[posicion]);
+ */
+
+//ACTUALIZAR_PROPIEDADES
+/* 
+ var mochila ={
+    "color": "azul",
+    "tamaño": "mediano",
+    "contenido": ["botella de agua", "cuaderno"]
+ };
+
+ console.log(mochila.color)//azul
+ mochila.color = "verde"
+ console.log(mochila.color)//seActualizaElColorAlQueModificamos"verde"
+
+ console.log(mochila.contenido)
+ mochila.contenido.push("lapíz");
+console.log(mochila.contenido) */
+
+//AGREGAR_PROPIEDADES
+/* 
+var curso = {
+    "titulo": "Aprende Javascript desde cero.",
+    "idioma": "Español",
+    "duracion": 9
+};
+curso.vistas = 23423476
+console.log(curso.vistas) */
+
+//EliminarUnaPropiedad
+
+/* var curso = {
+    "titulo": "Aprende Javascript desde cero.",
+    "idioma": "Español",
+    "duracion": 9
+};
+curso.vistas = 23423476
+console.log(curso)
+delete curso.duracion;
+console.log(curso.duracion)
+console.log(curso) */
+
+//VERIFICAR_PROPIEDADES
+
+/* var curso = {
+    "titulo": "Aprende Javascript desde cero.",
+    "idioma": "Español",
+    "duracion": 9
+};
+console.log(curso.hasOwnProperty("titulo"))//true
+console.log(curso.hasOwnProperty("categoria"))//false
+console.log(curso.hasOwnProperty("duracion"))//true */
+
+/* function verificarPropiedad(obj, propiedad) {
+    if (obj.hasOwnProperty(propiedad)) {
+        return "Propiedad: " + obj[propiedad];
+    } else {
+        return "El objeto no tiene esta propiedad";
+    }
+}                                                       //Funcion para verificar si el objeto tiene o no la propiedad.
+
+var curso = {
+    "titulo": "Aprende Javascript desde cero.",
+    "idioma": "Español",
+    "duracion": 9
+};
+
+console.log(verificarPropiedad(curso,"duracion"))
+console.log(verificarPropiedad(curso,"categoria"))
+ */
+
+/* function actualizarDiscos(discos, id, propiedad, valor){
+    if (valor == "") {
+        delete discos[id][propiedad];       
+    } else if (propiedad === "canciones") { 
+        discos[id][propiedad] = discos[id][propiedad] || [];
+        discos[id][propiedad].push(valor);
+    } else {
+        discos[id][propiedad] = valor;
+    }
+}   
+
+var coleccionDeDiscos = {
+    7853: {
+        tituloDelALbum: "Bee Gees Greatest",
+        artista: "Bee Gees",
+        canciones: ["Stayin' Alive"]
+    },
+    5439: {
+        tituloDelAlbum: "ABBA Gold"
+    }
+};
+
+console.log(coleccionDeDiscos[7853].tituloDelALbum);
+actualizarDiscos(coleccionDeDiscos, 7853, "tituloDelAlbum", "");
+console.log(coleccionDeDiscos[7853].tituloDelALbum)
+console.log(coleccionDeDiscos[5439].canciones);
+actualizarDiscos(coleccionDeDiscos, 5439, "canciones", "Mamma mia");
+console.log(coleccionDeDiscos[5439].canciones)
+console.log(coleccionDeDiscos[5439].artista);
+actualizarDiscos(coleccionDeDiscos, 5439, "artista", "ABBA");
+console.log(coleccionDeDiscos[5439].artista) */
+
+//CICLO_WHILE 
+/* 
+ var i = 0; // la variable i es igual a 0
+ while (i <= 3) { //while es nuestro ciclo en español significa "mientras" entonces mientras que la condicion se cumpla i menor o igual a 3 se muestra el mensaje Hola, Mundo! 
+    console.log("Hola, Mundo!")
+    i++;// incrementamos la variable para que por logica del programa no se repita indefinidamente 
+ } */
+
+/*  var miArr = []; // var miArr es un arreglo vacio 
+ var i = 0; // var i es igual a =
+  
+ console.log(miArr); // comprobamos en la consola
+
+ while (i < 10) { // mientras la variable i sea menor a 10 
+    miArr.push(i); // la condicion es que agregamos a la variable i mientras se cumpla la condicion de que sea menor al llegar a 10 finaliza la funcion
+    i++;//IMPORTANTE!! INCREMENTAR LA VARIABLE PARA QUE NO SE REPITA INFINIDAD DE VECES
+}
+console.log(miArr)
+ */
+
+/* var numeros = [2, 3, 4, 5, 6, 8, 9, 34];
+
+while (numeros.length > 4) {
+    numeros.pop();
+}
+console.log(numeros) */
+
+var myArr = [];
+
+for (var i = 0; i < 10; i += 2) {
+    myArr.push(i);
+}
+console.log(myArr);
