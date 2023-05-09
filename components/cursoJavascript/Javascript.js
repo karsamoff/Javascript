@@ -744,9 +744,76 @@ while (numeros.length > 4) {
 }
 console.log(numeros) */
 
-var myArr = [];
+// CICLO_FOR
+/* var myArr = [];
 
 for (var i = 0; i < 10; i += 2) {
     myArr.push(i);
 }
-console.log(myArr);
+console.log(myArr); */
+
+/* var miArreglo = []; // DEFINIMOS UN ARREGLO
+
+for (var i = 1; i < 50; i += 2 ){ // FOR ES EL CICLO i = 0 SE INICIA LA VARIABLE, i < 20 ES LA CONDICION VERDADERA PARA EL CICLO; i += 2 LA USAMOS PARA MOSTRAR LOS NUMEROS IMPARES HASTA EL 19
+    miArreglo. push(i); // agregamos push para cada numero mas desde 1
+}
+console.log(miArreglo) */
+
+/* var miArreglo = [] // Tenemos los numeros impares del 1 hasta el 20
+for (var i = 1; i < 20; i += 2) 
+miArreglo.push(i); 
+console.log(miArreglo) */ 
+
+// CICLOS_FOR_PARA_CONTAR_HACIA_ATRAS
+
+
+
+/* for (var i = 15; i >= 10; i--){
+    console.log(i)
+} */
+
+
+/* var miArreglo = [];
+ for (var i = 50; i > 0; i -= 2) {
+    miArreglo.push(i);
+ }
+ console.log(miArreglo) */
+
+ //ITERAR_CON_LOS_CICLOS_FOR
+
+ /* var miArreglo = [4, 6, 8, 2];
+ var total = 0;
+
+ for (var i = 0; i < miArreglo.length; i ++) {
+    total += miArreglo[i];
+
+ }
+ console.log(total ) */
+
+ /* var lenguajes = ["JavaScript", "Python", "Java", "C++"];
+ 
+ for (var i = 0; i < lenguajes.length; i++) {
+    console.log(lenguajes[i].toUpperCase());//.toUpperCase() modifica las cadenas de texto a mayuscula
+ } */
+
+ /* function contarNumerosPares(arreglo) {
+    var total = 0;
+    for (var i = 0; i < arreglo.length; i++){
+        if (arreglo[i] % 2 == 0) {
+            total++;
+        }
+    }
+    return total
+ }
+ console.log(contarNumerosPares([10, 6, 1, 2])) */
+ 
+ //CICLOS_ANIDADOS
+
+ var miArreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+ for (var i = 0; i < miArreglo.length; i++) {
+    var arregloAnidado = miArreglo[i];
+    for (var j = 0; j < arregloAnidado.length; j++) {
+        console.log(arregloAnidado[j])
+    }
+ }
