@@ -808,7 +808,7 @@ console.log(miArreglo) */
  console.log(contarNumerosPares([10, 6, 1, 2])) */
  
  //CICLOS_ANIDADOS
-
+/* 
  var miArreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
  for (var i = 0; i < miArreglo.length; i++) {
@@ -817,3 +817,311 @@ console.log(miArreglo) */
         console.log(arregloAnidado[j])
     }
  }
+ */
+
+
+ //DO_WHILE
+
+ // Para esto sirve un ciclo DO While cuando el usuario ingrese un valor le oedimos que ingrese un valor y con while lo verificamos 
+
+ /* var x;
+ x = 16;
+  do {
+    console.log(x);
+    x++;
+ } while (x < 20);// se muestran los numeros del 16 al 19 */
+
+ // MINI_PROYECTO_VERIFICAR_CONTACTOS
+/* 
+ var contactos = [
+    {
+        "nombre": "Nora",
+        "apellido": "Nav",
+        "numero": "0543236543",
+        "gustos": ["Pizza", "Programacion"]
+    },
+    {
+        "nombre": "Harry",
+        "apellido": "Potter",
+        "numero": "0994372684",
+        "gustos": ["Hogwarts", "Magia"]
+    },
+    {
+        "nombre": "Sherlock",
+        "apellido": "Holmes",
+        "numero": "0487345643",
+        "gustos": ["Casos interesantes", "Violin"]
+    }
+ ]
+
+ function buscarPerfil(nombre, propiedad){
+    for (var i = 0; i < contactos.length; i++) {
+        if (contactos[i].nombre === nombre){
+            return contactos[i][propiedad] || "La propiedad no existe.";
+        }
+    }
+    return "El contacto no esta en la lista."
+ }
+ console.log(buscarPerfil("Harry", "direccion"));
+  */
+
+ //NUMEROS_ALEATORIOS
+
+ /* function generarFraccionAleatoria(){ 
+    return Math.random(); // Entre 0 y 1 pero el 1 no esta dentro de los resultados 
+ }
+
+ console.log(generarFraccionAleatoria())
+ console.log(generarFraccionAleatoria())
+ console.log(generarFraccionAleatoria())
+ console.log(generarFraccionAleatoria())
+ console.log(generarFraccionAleatoria())
+ console.log(generarFraccionAleatoria())
+
+ console.log(Math.random())
+
+ var numeroALeatorio = Math.random
+
+ console.log(numeroALeatorio()) */
+
+ /* var numeroALeatorioEntre0y19 = Math.floor(Math.random() * 20);
+ console.log(numeroALeatorioEntre0y19) */
+
+ /* function generarEnteroAleatorio(limiteSuperior) {
+    // Generar un entero aleatorio entre 0 y el limite superior sin incluir lo
+    return Math.floor(Math.random() * limiteSuperior);
+ }
+
+ for (var i = 0; i < 15; i++){
+    console.log(generarEnteroAleatorio(15))
+ }
+ */
+
+//ALEATORIO_CON_UN_RANGO
+
+/* function rangoAleatorio(limeteInferior,limiteSuperior){  
+return Math.floor(Math.random() * (limiteSuperior - limeteInferior + 1)) + limeteInferior;
+}
+for (var i = 0; i < 15; i++) {
+    console.log(rangoAleatorio(2, 17))
+} 
+ */
+
+//FUNCION_PARSEiNT()
+
+/* var a = parseInt("5");
+var b = parseInt("7");
+
+console.log(a + b);
+ */
+/* 
+console.log(parseInt("110111", 2))//Mosttramos un numero binario agregando  el numero 2 
+ */
+/* 
+console.log(parseInt("3E0A", 16)) // Mostramos un numero exagecimal con el 16 
+ */
+
+/* function retornarMinimo(x, y) {
+console.log(x < y ? x : y); /* la condicion es x < y "?" lo usamos como return x : y; es nuestro else     if (x < y) {
+    return x;
+} else  {
+    return y;
+} //
+}
+ console.log(retornarMinimo(12, 19)) */
+
+/* 
+ var a = 5; 
+ var b = 9;
+
+ console.log(a > b ? a + 2 : b * 3); // consola 27
+ var a = 15;
+ var b = 9;
+ console.log(a > b ? a + 2 : b * 3); // consola 17 */
+
+ //MULTIPLES CONDICINALES 
+
+ /* function compararNumeros(a, b) {
+    return a == b ? "a y b son iguales" 
+    : a > b ? " a es mayor que b" 
+    : "b es mayor que a"; 
+ }
+
+ /* La funcion de arriba es igual a esto
+ if (a == b) {
+        return "a y b son iguales"
+    } else if (a > b) {
+        return "a es mayor que b";
+    } else {
+        return "b es mayor que a";
+    }//  
+
+    console.log(compararNumeros(11, 27))
+    console.log(compararNumeros(27, 27))
+    console.log(compararNumeros(27, 11))
+     */
+
+    /* var campista = "James";
+    var campista = "David";
+    var campista = "Jhon";
+    console.log(campista)
+    console.log(campista) // var lo podemos llamar o usar mas de una vez a diferencia de let solo se puede una vez
+    let campist = "Sebastian"
+    console.log(campist) */
+
+    //AMBITO VAR VS LET
+
+/*     var miVariableGlobal = 4;
+    console.log(miVariableGlobal);
+
+    function miFuncion() {
+        console.log(miVariableGlobal);
+        var miVariableLocal = 8;
+        console.log(miVariableLocal);
+
+    }
+miFuncion();
+console.log(miVariableGlobal);
+console.log(miVariableLocal); // Error la variable esta dentro de la funcion
+ */
+/* 
+for (let i = 0; i < 3; i ++) {
+    console.log(i);
+}
+console.log("Variable: " + i); // let solo sirve en el bloque o funcion donde se usa no existe fuera.
+ */
+/* 
+var mostrarColor = true;
+if (mostrarColor) {
+    let color = "verde";
+    console.log("Mi color favorito es " + color)
+}
+console.log(color); // let en este punto no existe solo se usa en la funcion a diferencia de var 
+ */
+
+//CONST
+ 
+/* const miConstante = 35;
+console.log(miConstante)
+miConstante = 15; // const solo se puede signar una vez a diferencia de var y tampoco se puede crear la variable y asignar un valor luego con const
+ */
+// const la designamos en desarrollos para informar a los demas que esa variable const no se puede modificar
+
+/* function calcularAreaCirculo(radio) {
+    const PI = 3.14;
+
+    if (radio < 0) {
+        return undefined; 
+    }
+    return PI * (radio ** 2);
+        
+}
+console.log(calcularAreaCirculo(10))
+ */
+/* 
+const  MI_ARREGLO = [1, 2, 3, 4];
+ // PODEMOS MUTAR EL VALOR DEL ARREGLO OSEA CAMBIAR LO DE LA SIGUIENTE MANERA
+
+ MI_ARREGLO[0] = 5;
+ MI_ARREGLO[1] = 6;
+ MI_ARREGLO[2] = 7;
+ MI_ARREGLO[3] = 8;
+// LLAMAMOS EL INDICE QUE QUEREMOS CAMBIAR Y ASIGNAMOS EL VALOR
+ console.log(MI_ARREGLO)
+ */
+
+ // COMO NO INMUTAR UN OBJETO
+
+ /* let colores = {
+    "verde": "#10e04b",
+    "azul": "#1b50e0",
+    "negro": "#000000",
+    "blanco": "#ffffff"
+ };
+ Object.freeze(colores);//con esta linea congelamos cualquier intento de modificacion delete o agregar a las variables 
+ console.log(colores) */
+
+
+ // FUNCIONES_FLECHA
+ /* const fecha = function () {
+    return new Date();
+ }; */
+
+ /* 
+const fecha = () => new Date();//asi usamos la funcion fecha, la usamos para reducir la funcion
+ */
+
+//funcion con uno o mas parametros
+/* 
+const sumarTres = function(x) {
+    return x + 3;
+};
+ */
+
+/* 
+const sumarTres = (x) => x + 3;// asi reducimos la funcion de arriba la escribimos en funcion flecha con tal de abreviar las funciones
+console.log(sumarTres(4))
+ */
+
+/* const concatenarArreglos = function(arr1, arr2) {
+    return arr1.concat(arr2);
+};
+
+console.log(concatenarArreglos([1, 2],[3, 4, 5]))
+ */
+
+//asi abreviamos el codigo
+/* 
+const concatenarArreglos = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(concatenarArreglos([1, 2],[3, 4, 5])) */
+
+//VALORES_POR_DEFECTO_PARA_UNA_FUNCION 
+/* 
+const incrementar = (num, valor = 1) => num + valor; 
+
+console.log(incrementar(5, ));// consola 6
+console.log(incrementar(5, 3));// consola 8
+ */
+
+//OPERADOR_REST
+
+//PASAR CUALQUIER ARGUMENTO A ARREGLO
+
+/* function miFuncion(...args) {//no necesariamente es args solo es para abreviar la palabra argumentos lo principal es agregar los tres puntos antes
+    console.log(args);
+}
+
+miFuncion([1, 2, 3, 4],[5, 6, 7, 8]);
+
+ */
+
+/* function miFuncion(...args) {
+    console.log(args.length);
+}
+
+miFuncion([1, 2, 3, 4, 5, 6, 7, 8]);//1 array
+miFuncion(1, 2, 3, 4, 5, 6, 7, 8);// 8 caracteres
+ */
+
+/* const sumar = (x, y, z) => {
+    return args.reduce((a, b) => a + b, 0);
+} // con esta funcion solo teniamos 3 parametros para trabajar con el metodo args de abajo podemos agregar mas arreglos para trabajar
+ */
+
+/* 
+const sumar = (...args) => {
+    return args.reduce((a, b) => a + b, 0);
+};
+console.log()
+ */
+
+//OPERADOR_SPREAD
+// TOMA UN ARRAY Y LO DESCOMPONE EN ELELEMTOS INDIVUADUALES PARA QUE LA FUNCION LOS TOOME EN PARTES ESPECIFICAS
+
+const numeros = [1, 2, 3];
+function sumar(x, y, z) {
+    return x + y + z;
+}
+
+console.log(sumar(...numeros))
