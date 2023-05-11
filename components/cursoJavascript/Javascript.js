@@ -1119,9 +1119,294 @@ console.log()
 //OPERADOR_SPREAD
 // TOMA UN ARRAY Y LO DESCOMPONE EN ELELEMTOS INDIVUADUALES PARA QUE LA FUNCION LOS TOOME EN PARTES ESPECIFICAS
 
-const numeros = [1, 2, 3];
+/* const numeros = [1, 2, 3];
 function sumar(x, y, z) {
     return x + y + z;
 }
 
-console.log(sumar(...numeros))
+console.log(sumar(...numeros))// el operador spread los usamos cuando llamamos la funcion en este caso la usamos para poder tomar los valores del arreglo y no llamar uno por uno example sumar(numeros[0],numeros[1], numeros[2])
+ */
+/* 
+//SINTAXIS_DE_DESTRUCTURACION
+const usuario = {
+    nombre: "Gino Smith",
+    edad: 34
+};
+
+//const nombre = usuario.nombre;
+//const edad = usuario.edad; asi llamabamos antes a las propiedades, ahora con la sintaxis de desestructuracion lo hacemos de la siguiente manera
+
+const {nombre, edad} = usuario; 
+
+ */
+/* 
+var coordenadas = { 
+    x: 4,
+    y: 6,
+    z: 12
+};
+
+const {x, y, z} = coordenadas;
+
+console.log(x);
+console.log(y);
+console.log(z);
+ */
+
+//SINTAXIS_DE_DESESTRUCTURACION:_OBJETOS_ANIDADOS:
+/* 
+const usuario = { 
+    johnDoe:{
+        edad: 27,
+        correo: "johnDoe@freecodecamp.com"
+    }
+};
+
+//const {johnDoe: {edad, correo}} = usuario;
+// tambien podemos modificar el nombre de la propiedad agregando dos puntos y el nombre que deseemos
+const {johnDoe: {edad: edadDelUsuario, correo: correoDelUsuario}} = usuario;
+//console.log(edad)
+console.log(edadDelUsuario, correoDelUsuario)
+ */
+/* 
+const PRONOSTICO_LOCAL = {
+    "ayer": {
+        minima: 61,
+        maxima: 75
+    },
+    "hoy": {
+        minima: 64,
+        maxima: 77
+    },
+    "mañana":{
+        minima: 68,
+        maxima: 80
+    }
+};
+
+/* const minimaHoy = PRONOSTICO_LOCAL.hoy.minima;
+const maximaHoy = PRONOSTICO_LOCAL.hoy.maxima;
+
+console.log(minimaHoy,maximaHoy)
+//de la siguiente manera lo hacemos con la sintaxis de desestructuracion
+const {hoy: {minima: minimaHoy}, mañana: {minima: minimaMañana, maxima}} = PRONOSTICO_LOCAL;
+console.log(minimaHoy, minimaMañana, maxima)
+ */
+
+//SINTAXIS DE DESESTRUCTURACION: ARREGLOS
+
+/* var a;
+var b;
+var c
+[a, b,,,, c] = [1, 2, 3, 4, 5, 6]; // De esta manera llamamos el 6 y ni el 3 agregando comas como si se corriera un espacio por coma
+
+console.log(a, b, c)
+ */
+
+/* INTERCAMBIO DE VARIABLES EN UNA MISMA LINEA
+ var a = 8;
+var b = 6;
+
+[b, a] = [a ,b];
+
+console.log("a: " + a);
+console.log("b: " + b)
+ */
+
+/* var a;
+var b;
+var arr;
+
+[a, b, ...arr] = [1, 2, 3, 4, 5, 6, 7, 8];
+
+console.log("a: " + a)
+console.log("b: " + b)
+console.log("demas numeros del array: " + arr)
+ */
+/* 
+const arregloInicial = [1, 2, 3, 4, 5, 6, 7, 8]; //Definimos un arreglo
+function removerTresPrimerosElementos(arreglo) { //definimos lo que va hacer la funcion 
+    const [ , , , ...nuevoArreglo] = arreglo; // la funcion va a tomar la constante removera los tres primeros elementos y dejamoa el arreglo que tomamos como argumento
+    return nuevoArreglo; // finalmente retornamos el nuevo arreglo con los cambios en la funcion
+}
+
+const arregloFinal = removerTresPrimerosElementos(arregloInicial); // por ultimo creamos la variable const arregloFinal con la funcion y el arreglo que queremos modicicar
+console.log(arregloFinal);
+ */
+
+// SINTAXIS DE DESESTRUCTURACION: PASAR OBJETO COMO ARGUMENTO
+
+/* var nuevoPerfilCliente = {
+    nombre: "Jane Doe",
+    edad: 24,
+    nacionalidad: "Española",
+    ubicacion: "España",
+};
+
+const actualizarPerfil = ({nombre, edad, nacionalidad, ubicacion}) => {
+    console.log(nombre);
+    console.log(edad);
+    console.log(nacionalidad);
+    console.log(ubicacion);
+};
+
+actualizarPerfil(nuevoPerfilCliente) */
+
+/* const estadisticas = {
+    max: 56.78,
+    desviacionEstandar: 4.34,
+    mediana: 34.54,
+    moda: 23.87,
+    min: -0.75,
+    promedio: 35.85,
+};
+
+/* const mitad = (e) => (e.max + e.min) / 2.0; llamamos la const mitad para saber el punto medio de las estadisticas anteriores entonces tomamos el valor maximo del objeto y el minimo del objeto y lo dividimos en 2
+esto lo pasamos a manera que usemos la desestructuracion de objetos 
+
+const mitad = ({max, min}) => (max + min) / 2.0;
+
+console.log(mitad(estadisticas))
+ */
+
+//PLANTILLAS_LITERALES O PLANTILLAS DE CADENAS
+
+/* 
+CARACTERISTICAS:
+    - SE USA EL ACENTO INVERTIDO (BACKTICK) ` EN LUGAR DE COMILLAS.
+    - PUEDEN CONTENER COMILLAS SIMPLES Y DOBLES.
+    - LAS LINEAS SE PRESERVAN COMO SE ESCRIBEN EN EL CODIGO.
+    - PARA REEMPLAZAR UNA VARIABLE SE ESCRIBE ${VARIABLE}.
+    - DENTRO DE ${} TAMBIEN PUEDES ESCRIBIR EXPRESIONES.
+*/
+
+/* var a = 6;
+console.log(`el valor de a es ${a} `) // consola el valor de a es 6
+ */
+/* 
+var nombre = "Nora";
+var edad = 6;
+console.log(`Mi nombre es ${nombre} y tengo ${edad} años. `); // Mi nombre es Nora y tengo 6 años.
+ */
+
+/* var myArray = [1, 2, 3, 4, 5, 6]
+
+// console.log(`Mi arreglo es ${myArray}`) //Mi arreglo es 1,2,3,4,5,6 
+console.log(`Mi arreglo es ${JSON.stringify(myArray)}`) // consola Mi arreglo es [1,2,3,4,5,6]
+ */
+
+//tambien podemos cambiar  el valor de las propiedades de un objeto en otra variable y no directamente en console.log.
+
+
+/* var persona = { 
+    nombre: "Gino Cass",
+    edad: 10
+};
+
+const SALUDO = `¡Hola! Mi nombre es ${persona.nombre} y tengo ${persona.edad} años. `;
+
+console.log(SALUDO);
+ */
+
+// CREAR OBJETOS DE FORMA CONCISA
+
+
+// esta es la forma tradicional de crear objetos
+/* const crearPersona = (nombre, edad, idioma) => {
+    return {
+        nombre: nombre,
+        edad: edad,
+        idioma: idioma
+    }
+};
+
+console.log(crearPersona("Gino Smith", 28, "Español"))
+ */
+
+// esta es la forma concisa
+
+/* const crearPersona = (nombre, edad, idioma) => ({nombre, edad, idioma});
+
+console.log(crearPersona("Gino Smith", 28, "Español"))
+
+ */
+
+//METODOS => TAMBIEN PODEMOS DECLARAR FUNCIONES DENTRO DE LOS OBJETOS QUE CREE 
+
+/* const persona = {
+    nombre: "Isabel",
+    presentarse: function() {
+        return `¡Hola! Mi nombre es ${this.nombre}.`;
+    }
+};
+
+console.log(persona.presentarse())
+ */
+
+// de esta forma lo hacemos mas conciso
+/* 
+const persona = {
+    nombre: "Isabel",
+    presentarse() { //el cambio es omitir la palabra function
+        return `¡Hola! Mi nombre es ${this.nombre}.`;
+    }
+};
+
+console.log(persona.presentarse()) // consola Mi nombre es Isabel.
+ */
+
+//Definir una clase
+
+/* class TransbordadorEspacial {
+    constructor(planeta) {
+        this.planeta = planeta;
+    }
+}
+
+var zeus = new TransbordadorEspacial ("Júpiter")
+var apolo = new TransbordadorEspacial ("Marte");
+console.log(zeus.planeta, apolo.planeta)
+ */
+
+/* class Mascota {
+    constructor(nombre,edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+}
+
+var miMascota = new Mascota ("Coco", 7);
+
+console.log("Nombre: " + miMascota.nombre)
+console.log("Edad: " + miMascota.edad)
+
+var tuMascota = new Mascota ("Max" , 3);
+
+console.log("Nombre: " + tuMascota.nombre)
+console.log("Edad: " + tuMascota.edad)
+ */
+// GETTERS & SETTERS 
+
+//nos permiten proteger la data de ese objeto.
+
+class Libro {
+    constructor(autor) {
+        this._autor = autor;
+    }
+
+    get autor(){
+        return this._autor;
+    } // nos permiten obtener el valor de una propiedad privada accediendo de una forma indirecta
+
+    set autor(nuevoAutor){
+        this._autor = nuevoAutor;
+
+    } // funcion que nos permite actualizar el valor de una propiedad.
+}
+
+var libro = new Libro ("anónimo")
+console.log(libro.autor)//Getter
+
+libro.autor = "Gino Smith";
+console.log(libro.autor)
+
