@@ -1408,5 +1408,5 @@ var libro = new Libro ("anónimo")
 console.log(libro.autor)//Getter
 
 libro.autor = "Gino Smith";
-console.log(libro.autor)
-
+console.log(libro.autor)//Setter, gracias al setter se actualiza ya que no se podria por la condicion de la funcion _autor.
+        

@@ -1,0 +1,94 @@
+.header {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #f1f1f1;    
+    background-color: #f1f1f1;
+    z-index: 99;
+}
+.topHeader {
+    display: flex !important;
+    background-color: #f1f1f1b6;
+    justify-content: flex-end;
+    height: 40px;
+    align-items: center;
+    
+}
+* {
+    font-family: 'Lato';
+    font-weight: 400;
+    max-width: 100%;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+}
+.login {
+    display: flex !important;
+    align-items: center;
+    min-width: 335px;
+    line-height: 1.5;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    max-width: 160px;
+}
+.help {
+    border-right: 1px solid #000;
+    padding-right: 25px;
+    line-height: 1.5;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    max-width: 160px;
+}
+.loginn {
+    padding: 0 0 0 20px!important;
+    line-height: 1.5;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    max-width: 160px;
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.icon_loctor::before {
+    content: '\e92a';
+    font-family: "iconography";
+    padding-left: 65px;
+}
+.store {
+    
+
+}
+.searchs::before { 
+    content: '\e94b';
+    font-family: "iconography";
+    
+}
+.img_logo {
+    width: 220px;
+}
+nav > div  {
+    display: flex;
+    justify-content: center;
+}
+
+nav > div a {
+    padding: 0 20px;
+    color: #000;
+    text-decoration: none   ;
+}
+
+
+
+@font-face {
+        font-family: "iconography";
+        src: url(../../icon/icomoon/fonts/icomoon.woff);
+    }
